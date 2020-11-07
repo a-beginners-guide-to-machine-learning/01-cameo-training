@@ -22,8 +22,8 @@ public class DNA : MonoBehaviour
     private void OnMouseDown()
     {
         Dead = true;
-        // TimeToDie = PopulationManager.elepsed;
-        Debug.Log("Dead At: " + TimeToDie);
+        TimeToDie = PopulationManager.Elapsed;
+
         _spriteRender.enabled = false;
         _collider2D.enabled = false;
     }
