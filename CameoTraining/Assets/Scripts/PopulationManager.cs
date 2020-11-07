@@ -26,6 +26,7 @@ public class PopulationManager : MonoBehaviour
             firstPeople.GetComponent<DNA>().R = Random.Range(0.0f, 1.0f);
             firstPeople.GetComponent<DNA>().G = Random.Range(0.0f, 1.0f);
             firstPeople.GetComponent<DNA>().B = Random.Range(0.0f, 1.0f);
+            firstPeople.GetComponent<DNA>().S = Random.Range(0.1f, 0.3f);
 
             _population.Add(firstPeople);
         }
@@ -92,12 +93,14 @@ public class PopulationManager : MonoBehaviour
             offSpring.GetComponent<DNA>().R = Random.Range(0, 10) < 5 ? dnaParent1.R : dnaParent2.R;
             offSpring.GetComponent<DNA>().G = Random.Range(0, 10) < 5 ? dnaParent1.G : dnaParent2.G;
             offSpring.GetComponent<DNA>().B = Random.Range(0, 10) < 5 ? dnaParent1.B : dnaParent2.B;
+            offSpring.GetComponent<DNA>().S = Random.Range(0, 10) < 5 ? dnaParent1.S : dnaParent2.S;
         }
         else
         {
             offSpring.GetComponent<DNA>().R = Random.Range(0.0f, 1.0f);
             offSpring.GetComponent<DNA>().G = Random.Range(0.0f, 1.0f);
             offSpring.GetComponent<DNA>().B = Random.Range(0.0f, 1.0f);
+            offSpring.GetComponent<DNA>().S = Random.Range(0.1f, 0.3f);
         }
 
         return offSpring;
